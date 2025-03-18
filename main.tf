@@ -27,7 +27,7 @@ resource "aws_instance" "example" {
   tags = {Name = "tarefa1-terraform"}
 }
 
-// Comandos para executar com variaveis: 
+// Comandos para executar com variaveis via terminar: 
 
 // terraform init
 
@@ -36,3 +36,11 @@ resource "aws_instance" "example" {
 // terraform apply -var 'instance_type=t2.micro' -var 'ami=ami-0a0d9cf81c479446a'
 
 //terraform destroy -var 'instance_type=t2.micro' -var 'ami=ami-0a0d9cf81c479446a'
+
+// comando para executar com arquivo de variaveis. 
+
+// terraform plan -var-file="localdoarquivo" -out nomedoarquivo
+
+// terraform apply -var-file="localdoarquivo"
+
+// terraform destroy -var-file="localdoarquivo"
